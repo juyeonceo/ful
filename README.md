@@ -42,7 +42,7 @@ SQL Editor 접근 권한으로 회원가입과 상품 관리 마이그레이션�
 
 - 토스페이먼츠 테스트 클라이언트 키를 `NEXT_PUBLIC_TOSS_CLIENT_KEY`, 테스트 시크릿 키를 `TOSS_SECRET_KEY`에 넣습니다. 테스트 결제 승인과 전체·부분 취소를 검증한 후 운영 키로 바꾸세요.
 - 토스페이먼츠 웹훅 URL은 `https://배포주소/api/toss/webhook`입니다. 수신된 결제 키로 토스 API의 실제 결제 상태를 다시 조회합니다.
-- Vercel의 `CRON_SECRET`을 설정하면 `/api/maintenance/expire`가 대기 주문의 예약 재고와 만료 포인트를 정리합니다. `vercel.json`의 10분 간격 실행을 지원하는 Vercel 요금제 및 크론 설정을 확인하세요.
+- Vercel Cron은 사용하지 않습니다. `/api/maintenance/expire`는 자동 실행되지 않으므로 대기 주문의 예약 재고와 만료 포인트를 정리하려면 별도 운영 절차가 필요합니다.
 - `NEXT_PUBLIC_KAKAO_CHANNEL_URL`에 실제 카카오 채널 링크를 넣으면 고객센터에 상담 버튼이 표시됩니다.
 - 배송비, 무료배송 기준, 포인트 적립률과 유효기간은 관리자 화면의 운영 정책에서 설정합니다. 실제 택배사·송장번호는 주문별로 등록합니다.
 
